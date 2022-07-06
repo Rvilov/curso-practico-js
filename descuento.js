@@ -18,9 +18,9 @@ var coupons = [
 
 function calcularPrecioConDescuento(precio,descuento){ 
     const porcentajePrecioConDescuento= 100 - descuento;
-    const precionConDescuento = (precio * porcentajePrecioConDescuento)/100;
+    const precioConDescuento = (precio * porcentajePrecioConDescuento)/100;
 
-    return precionConDescuento;
+    return precioConDescuento;
 };
 
 
@@ -40,35 +40,33 @@ function PriceDiscountCoupon(){
     if (!userCoupon) {
         alert("El cupón " + inputCoupon + "no es válido");
     }else{
-        // const precioConDescuento = calcularPrecioConDescuento(inputPrice,inputDiscount);
-        // var parrafo = document.getElementById("resultP");
-        // parrafo.innerText = "El precio con descuento es: $" + precioConDescuento;
-        // console.log(inputDiscount)
+        let descuentoCompleto = Number(userCoupon.discount) + Number(inputDiscount);
+        const precioConDescuento = calcularPrecioConDescuento(Number(inputPrice),Number(descuentoCompleto));
+        let parrafo = document.getElementById("resultP");
+        parrafo.innerText = "El precio con descuento es: $" + precioConDescuento;
+        console.log({
+
+            descuentoCompleto,
+            precioConDescuento,
+           
+        
+        });
     }
-
+  
     
-   
 
 }
 
 
 
-function PriceDiscount(){
-    const inputPrice = document.getElementById("inputPrice").value; 
-    const inputDiscount = document.getElementById("inputDiscount").value;
+// function PriceDiscount(){
+//     const inputPrice = document.getElementById("inputPrice").value; 
+//     const inputDiscount = document.getElementById("inputDiscount").value;
        
-    const precioConDescuento = calcularPrecioConDescuento(inputPrice,inputDiscount);
-    var parrafo = document.getElementById("resultP");
-    parrafo.innerText = "El precio con descuento es: $" + precioConDescuento;
-    console.log(inputDiscount)
+//     const precioConDescuento = calcularPrecioConDescuento(inputPrice,inputDiscount);
+//     var parrafo = document.getElementById("resultP");
+//     parrafo.innerText = "El precio con descuento es: $" + precioConDescuento;
+//     console.log(inputDiscount)
 
-}
+// }
 
-// console.log({
-
-//     precioOriginal,
-//     descuento,
-//     porcentajePrecioConDescuento,
-//     precionConDescuento,
-
-// });
