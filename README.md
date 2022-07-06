@@ -6,3 +6,10 @@
 - Implementar las formulas en JS
 - Crear funciones
 - Integrar JS con HTML
+
+## Taller 2: Porcentajes y Descuentos
+
+- Definir Formulas
+- Implementar las formulas en JS
+- Crear Funciones
+- Integrar JS con HTML
