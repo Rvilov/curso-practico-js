@@ -11,6 +11,7 @@ const salariosVenOrden = salariosVen.sort(function(salaryA,salaryB){
     return  salaryA-salaryB;    
 });
 
+//helpers
 function esPar(numero){
     return (numero %2 === 0); 
 };
@@ -25,6 +26,7 @@ function calcularPromedioLista1(lista){
     return promedioLista;
 };
 
+//calculadora mediana
 function medianaSalarios(lista){
     const mitad = parseInt(lista.length/2);
 
@@ -39,4 +41,16 @@ function medianaSalarios(lista){
     }
 };
 
-console.log(medianaSalarios(salariosVenOrden));
+const medianaGeneralVen = medianaSalarios(salariosVenOrden)
+
+const spliceStart = salariosVenOrden.length * 0.9;
+const spliceCount = salariosVenOrden.length - spliceStart;
+
+
+const salariosTop10Ven = salariosVenOrden.splice(spliceStart,spliceCount);
+const medianaTop10Ven = medianaSalarios(salariosTop10Ven);
+
+console.log({
+    medianaGeneralVen,
+    medianaTop10Ven,
+});
