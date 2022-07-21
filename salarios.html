@@ -8,7 +8,20 @@
 </head>
 <body>
     <h1>Salarios</h1>
+    <form action="" id="salarios">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" autofocus>
+        <label for="numero">Salario</label>
+        <input type="number" id="numero">
+        <button type="button" onclick="agregarSalario()" >Agregar</button>
+        <button type="button" onclick="limpiarLista()">Limpiar Lista</button>
+        <button type="button" onclick="medianaSalarios()">Calcular mediana</button>
+        <button type="button" onclick="medianaSalariosTop10()">Calcular mediana top 10</button>
+    </form>
+    <section id="result">
+
+    </section>
 </body>
-<script src="./salarios.js"></script>
+<!-- <script src="./salarios.js"></script> -->
 <script src="./analisis.js"></script>
 </html>
