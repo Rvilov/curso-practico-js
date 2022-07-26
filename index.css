@@ -1,17 +1,20 @@
 body{
-    background-color: #100F0F ;
+    background-color: #5800FF ;
     font-family: 'Montserrat', sans-serif;
     padding: 0px;
     margin: 0px;
 }
 
 a{
-    color: #F1F1F1;
+   
     text-decoration: none;
 }
 
+h1{
+    color: #F1F1F1
+}
 
-#flex-container{
+.flex-container{
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -34,17 +37,23 @@ a{
     align-self: center;
     }
 
+.eName{
+    margin-right: 100px;
+}
+
 .menu{
-    background: #0F3D3E;
+    background: #0096FF;
     margin: 0px;  
 }
 
 .menuItem{
     display: flex;
     width: 100px;
-    height: 100%;
+    border-radius: 5px;
+    height: 50px;
     text-align: center;
     margin: 0%;
+    
 }
 
 .menuItem a{
@@ -52,11 +61,57 @@ a{
     justify-self: center;
     justify-content: center;
     width: 100%;
+    color: #F1F1F1;
+    
 }
 
-.menuItem:hover{
-    background-color: #1a8385 ;
+.menuItem a:hover{
+    background-color: #00D7FF ;
     transition: 100ms;
+    color: #5800FF;
+    cursor: pointer;
+}
+.menuItem:hover{
+    background-color: #00D7FF ;
+    transition: 100ms;
+    color: #5800FF;
+    cursor: pointer;
+}
+#logo{
+    border: 5px solid #F1F1F1;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.talleres{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin-top: 70px;
+    margin-bottom: 130px;
+    width: 100%;
+    height: 500px;
+    
+}
+
+.taller{
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 80px;
+    width: 400px;
+    height: 500px;    
+    border-radius: 5px;
+    background-color: #72FFFF;
 }
 
 
