@@ -1,23 +1,23 @@
-let lista1 = [];
 
+var lista2 = [];
 // agregar Numero
-function agregarNumero(){
-    let formList = document.getElementById("lista");
-    let numero = document.getElementById("numero");
-    lista1.push(Number(numero.value));
+function agregarNumeroModa(){
+    let formList = document.getElementById("listaModa");
+    let numero = document.getElementById("numeroModa");
+    lista2.push(Number(numero.value));
     numero.focus();
     formList.reset();
 };
 
 // Limpiar
 function limpiarLista(){
-    lista1.splice(0,lista1.length);
+    lista2.splice(0,lista2.length);
 }
 
 function calcularModa(){
 const listaCount = {};
 
-lista1.map(
+lista2.map(
       function(element){
         if (listaCount[element]) {
             listaCount[element] += 1
@@ -32,7 +32,7 @@ var listaArray = Object.entries(listaCount).sort(
        return valorAcumulado[1] - nuevoValor[1] ;
 });
 
-let result = document.getElementById("result");
+let result = document.getElementById("resultMo");
     result.innerHTML =`
     <h2>La moda es: ${listaArray[listaArray.length - 1][0]}</h2>   
     `;

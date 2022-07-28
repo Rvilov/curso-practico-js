@@ -1,8 +1,8 @@
-let lista1 = [];
+var lista1 = [];
 
-function agregarNumero(){
-    let formList = document.getElementById("lista");
-    let numero = document.getElementById("numero");
+function agregarNumeroP(){
+    let formList = document.getElementById("listaPromedio");
+    let numero = document.getElementById("numeroPromedio");
     lista1.push(Number(numero.value));
     numero.focus();
     formList.reset();
@@ -28,7 +28,7 @@ function calcularPromedioLista1(){
     let promedioLista = sumaLista/lista1.length;
  
 
-    let result = document.getElementById("result");
+    let result = document.getElementById("resultP");
     result.innerHTML =`
     <h2>El promedio es: ${promedioLista}</h2>   
     `;

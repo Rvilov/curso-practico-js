@@ -1,18 +1,18 @@
 
-const lista1 = [];
+const lista3 = [];
 
 //agregarNumero
 function agregarNumero(){
-    let formList = document.getElementById("lista");
-    let numero = document.getElementById("numero");
-    lista1.push(Number(numero.value));
+    let formList = document.getElementById("listaMediana");
+    let numero = document.getElementById("numeroMediana");
+    lista3.push(Number(numero.value));
     numero.focus();
     formList.reset();
 };
 
 // Limpiar
 function limpiarLista(){
-    lista1.splice(0,lista1.length);
+    lista3.splice(0,lista3.length);
 }
 
 //promedio
@@ -45,14 +45,14 @@ function esPar(numero){
 
 var mediana;
 function calcularMedianaLista(){
-    let result = document.getElementById("result");
-    lista1.sort((a, b) => a - b);
-    console.log(lista1)
-    const mitadLista = parseInt(lista1.length/2);
+    let result = document.getElementById("resultM");
+    lista3.sort((a, b) => a - b);
+    console.log(lista3)
+    const mitadLista = parseInt(lista3.length/2);
     console.log(mitadLista)
-    if (esPar(lista1.length)){
-        const elemento1 = lista1[mitadLista];
-        const elemento2 = lista1[mitadLista-1];
+    if (esPar(lista3.length)){
+        const elemento1 = lista3[mitadLista];
+        const elemento2 = lista3[mitadLista-1];
     
         let promedioElemento1y2 = calcularPromedioLista1([elemento1,elemento2]);
 
@@ -62,7 +62,7 @@ function calcularMedianaLista(){
         `;
          
     }else{
-        mediana = lista1[mitadLista];
+        mediana = lista3[mitadLista];
         result.innerHTML =`
         <h2>La mediana es: ${mediana}</h2>   
         `;

@@ -13,6 +13,10 @@ var coupons = [
         name:"Becka",
         discount: 50
     },
+    {
+        name:"",
+        discount: 0
+    },
 ];
 
 
@@ -31,19 +35,33 @@ function PriceDiscountCoupon(){
     const inputCoupon = document.getElementById("inputCoupon").value;
 
     const isCouponValueValid = function (coupon) {
-        var discount = coupon.discount;
-        return coupon.name === inputCoupon;
+                   var discount = coupon.discount;
+            return coupon.name === inputCoupon;
+        
+        
     };
     
     const userCoupon = coupons.find(isCouponValueValid);
     
     if (!userCoupon) {
-        alert("El cupón " + inputCoupon + "no es válido");
-    }else{
+        alert("El cupón " + inputCoupon + " no es válido");
+    }else if(userCoupon == ""){
+        let descuentoCompleto = Number(inputDiscount);
+        const precioConDescuento = calcularPrecioConDescuento(Number(inputPrice),Number(descuentoCompleto));
+        let parrafo = document.getElementById("resultP");
+        parrafo.innerText = "El precio con descuento es: $ " + precioConDescuento;
+        console.log({
+
+            descuentoCompleto,
+            precioConDescuento,
+           
+        
+        });
+    } else{
         let descuentoCompleto = Number(userCoupon.discount) + Number(inputDiscount);
         const precioConDescuento = calcularPrecioConDescuento(Number(inputPrice),Number(descuentoCompleto));
         let parrafo = document.getElementById("resultP");
-        parrafo.innerText = "El precio con descuento es: $" + precioConDescuento;
+        parrafo.innerText = "El precio con descuento es: $ " + precioConDescuento;
         console.log({
 
             descuentoCompleto,

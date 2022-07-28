@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Curso Practico de JS</title>
-    <link rel="stylesheet" href="index.css">
+
+   
 </head>
 
 <body>
@@ -41,23 +42,109 @@
     <section class="talleres">
         <div class="taller">
             <div class="formulario">
+                <h3>Calcula el Area y Perimetro de un Cuadro</h3>
+        
+                <form action="">
+                    <label for="InputCuadrado">Escribe el tamaño de los lados del cuadrado</label>
+                    <input type="number" id="InputCuadrado" autofocus>
+                    <button type="button" onclick="calcularAreaCuadrado()">Area</button>
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Perimetro</button>
+                </form>
+            
+        
+            <section id="triangulo">
+                <h3>Calcula el Area y Perimetro de un triangulo</h3>
+                
+                <form action="">
+                    <label for="InputTrianguloL1">Escribe el tamaño del lado 1 </label>
+                    <input type="number" id="InputTrianguloL1">
+                    <br>
+        
+                    <label for="InputTrianguloL2">Escribe el tamaño de lado 2</label>
+                    <input type="number" id="InputTrianguloL2">
+                    <br>
+        
+                    <label for="InputTrianguloBase">Escribe el tamaño de la base</label>
+                    <input type="number" id="InputTrianguloBase">
+                    <br>
+        
+                    <label for="InputTrianguloAltura">Escribe la altura del triangulo</label>
+                    <input type="number" id="InputTrianguloAltura">
+                    <br>
+                    <button type="button" onclick="calcularAreaTriangulo()">Area</button>
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Perimetro</button>
+                </form>
+            </div>
+        
+            <section id="circulo">
+                <h3>Calcula el Area y Perimetro de un Cuadro</h3>
+                
+                <form action="">
+                    <label for="InputCirculo">Escribe el tamaño del radio del circulo</label>
+                    <input type="number" id="InputCirculo">
+                    <button type="button" onclick="calcularAreaCirculo()">Area</button>
+                    <button type="button" onclick="calcularPerimetroCirculo()">Perimetro</button>
+                    <button type="button" onclick="calcularDiametroCirculo()">Diametro</button>
+                </form>
+            </section>
+            </div>
+        </div>
+        <div class="taller">
+            <div class="formulario">
+                <section>
+                    <h3>Calcula el precio a pagar de tus productos con descuento.</h3>
+            
+                    <form action="">
+                        <label for="inputPrice">Escribe el precio de tu producto</label>
+                        <input type="number" id="inputPrice">
+                        <br>
+                        <label for="inputCoupon">Escribe el Cupon</label>
+                        <input type="text" id="inputCoupon">
+                        <br>
+                        <label for="inputDiscount">Escribe el descuento</label>
+                        <input type="number" id="inputDiscount">
+                        <br>
+                        <button type="button" onclick="PriceDiscountCoupon()">Calcular Precio Final</button>
+                        
+            
+                        <p id="resultP"></p>
+                    </form>
+                </section>
+            </div>
+        </div>     
+    </section>
+    
+    <section class="talleres">
+        <div class="taller">
+            <div class="formulario">
                 <h3>Promedio</h3>
 
-                <form action="" id="lista">
+                <form action="" id="listaPromedio">
                     <label for="">Agrega un numero la lista</label>
-                    <input type="number" id="numero" autofocus>
-                    <button type="button" onclick="agregarNumero()" >Agregar</button>
+                    <input type="number" id="numeroPromedio" >
+                    <button type="button" onclick="agregarNumeroP()" >Agregar</button>
                     <button type="button" onclick="limpiarLista()">Limpiar Lista</button>
                     <button type="button" onclick="calcularPromedioLista1()">Calcular</button>
                 </form>
-                <section id="result">
+                <section id="resultP">
             
                 </section>
             </div>
         </div>
         <div class="taller">
             <div class="formulario">
+                <h3>Mediana</h3>
 
+                <form action="" id="listaMediana">
+                    <label for="">Agrega un numero la lista</label>
+                    <input type="number" id="numeroMediana" >
+                    <button type="button" onclick="agregarNumero()" >Agregar</button>
+                    <button type="button" onclick="limpiarLista()">Limpiar Lista</button>
+                    <button type="button" onclick="calcularMedianaLista()">Calcular</button>
+                </form>
+                <section id="resultM">
+            
+                </section>
             </div>
         </div>     
     </section>
@@ -65,25 +152,35 @@
     <section class="talleres">
         <div class="taller">
             <div class="formulario">
-
+                <h3>Moda</h3>
+                <form action="" id="listaModa">
+                    <label for="">Agrega un numero la lista</label>
+                    <input type="number" id="numeroModa" >
+                    <button type="button" onclick="agregarNumeroModa()" >Agregar</button>
+                    <button type="button" onclick="limpiarLista()">Limpiar Lista</button>
+                    <button type="button" onclick="calcularModa()">Calcular</button>
+                </form>
+                <section id="resultMo">
+            
+                </section>
             </div>
         </div>
         <div class="taller">
             <div class="formulario">
-
-            </div>
-        </div>     
-    </section>
-    
-    <section class="talleres">
-        <div class="taller">
-            <div class="formulario">
-
-            </div>
-        </div>
-        <div class="taller">
-            <div class="formulario">
-
+                <h3>Salarios</h3>
+                <form action="" id="salarios">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" >
+                    <label for="numero">Salario</label>
+                    <input type="number" id="numero">
+                    <button type="button" onclick="agregarSalario()" >Agregar</button>
+                    <button type="button" onclick="limpiarLista()">Limpiar Lista</button>
+                    <button type="button" onclick="medianaSalarios()">Calcular mediana</button>
+                    <button type="button" onclick="medianaSalariosTop10()">Calcular mediana top 10</button>
+                </form>
+                <section id="result">
+            
+                </section>
             </div>
         </div>     
     </section>
@@ -91,5 +188,21 @@
     <footer class="flex-container menu">
 
     </footer>
+
+
+     <!-- css -->
+     <link rel="stylesheet" href="index.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- js -->
+     <script src="./analisis.js"></script>
+     <script src="./descuento.js"></script>
+     <script src="./figuras.js"></script>
+     <script src="./mediana.js"></script>
+     <script src="./moda.js"></script>
+     <script src="./promedio.js"></script>
+     <script src="./salarios.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
 </body>
+  
 </html>
